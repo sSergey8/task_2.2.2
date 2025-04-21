@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cars</title>
+  <style>
+    table {
+      border-spacing: 0;
+    }
+    th, td {
+      padding: 20px 20px; /* сверху/снизу 10px, слева/справа 20px */
+    }
+  </style>
+</head>
+<body>
+<table>
+  <caption>Table of Cars</caption>
+  <tr>
+    <th>model</th>
+    <th>registrationNumber</th>
+    <th>color</th>
+  </tr>
+  <tr th:each="car : ${list}">
+    <td th:utext="${car.model}">model</td>
+    <td th:utext="${car.registrationNumber}">registrationNumber</td>
+    <td th:utext="${car.color}">color</td>
+  </tr>
+</table>
+</body>
+</html>
